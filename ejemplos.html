@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title></title>
+</head>
+<body>
+<p id="demo"></p>
+
+<button onclick="llamar()">Click</button>
+
+<script type="text/javascript">
+	function myFunction(p1, p2){
+		return p1 * p2;
+	}
+	function llamar(){
+		document.getElementById('demo').innerHTML = myFunction(2, 4);
+	}
+
+</script>
+
+</body>
+</html>

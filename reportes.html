@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Reportes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/materialize.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/JavaScript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/JavaScript" src="js/bootstrap.min.js"></script>
+    <script type="text/JavaScript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/table-renderer.js"></script>
+    <script type="text/JavaScript" src="js/reportes.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron sub text-center">
+        <nav class="z-depth-0">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li><a data-activates="slide-out" href="#" class="xbutton-collapse"><span class="material-icons">menu</span></a></li>
+                </ul>
+                <ul class="right">
+                    <li><a href="#"><span class="material-icons">live_help</span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <img src="logo.png" alt="imagen" width="25%" class="text-center responsive"><br />
+        <small>Sistema de Control de Apoyos de Participacion Ciudadana</small>
+    </div>
+    <div class="toolbar white">
+        <div class="container-fluid">
+            <div class="left">
+                <p class="hide-on-small-only">
+
+                </p>
+            </div>
+            <div class="right">
+                <a class="modal-trigger waves-effect waves-dark btn btn-flat" href="#mdBusqueda"><i class="material-icons left">search</i>
+                Buscar reporte</a>
+                <a class="modal-trigger waves-effect waves-dark btn btn-flat" href="#mdRegistro"><i class="material-icons left">add</i>
+                  Nuevo</a>
+            </div>
+        </div>
+    </div>
+    <!-- Tabla con registros -->
+    <div id="cTbReportes">
+        <table class="table table-hover table-bordered" id="tbSolicitantes">
+            <thead>
+                <tr>
+                    <th>Folio</th>
+                    <th>Fecha de solicitud</th>
+                    <th>Detalles</th>
+                    <th>Solicitante</th>
+                    <th>Servicio</th>
+                </tr>
+            </thead>
+            <tbody id="contenidotb">
+
+            </tbody>
+        </table>
+        <div class="pagination">
+            <div class="pagination-buttons left">
+                <a href="#" class="btn btn-primary btn-flat to-first float-left disabled hide"><i class="material-icons">chevron_left</i><i class="material-icons">chevron_left</i></a>
+                <a href="#" class="btn btn-primary btn-flat to-previous float-left"><i class="material-icons">chevron_left</i></a>
+            </div>
+            <div class="pagination-pages left">
+            </div>
+            <div class="pagination-buttons right">
+                <a href="#" class="btn btn-primary btn-flat to-next float-left"><i class="material-icons">chevron_right</i></a>
+                <a href="#" class="btn btn-primary btn-flat to-last float-left disabled hide"><i class="material-icons">chevron_right</i><i class="material-icons">chevron_right</i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal NUEVO REPORTE -->
+    <div id="mdRegistro" class="modal modal-fixed-footer white">
+        <div class="modal-content">
+            <h5>Nuevo reporte</h5>
+            <br />
+            <form id="frmRegistraReporte" method="post">
+
+                <div class="form-space">
+                    <label>Solicitante</label>
+                    <select class="browser-default" id="cbbSolicitante" name="cbbSolicitante">
+                  <option value="" disabled selected>Selecione una opcion</option>
+                </select>
+                </div>
+
+                <div class="form-space">
+                    <label>Area a asignar</label>
+                    <select class="browser-default" id="cbbArea" name="cbbArea">
+                  <option value="" disabled selected>Selecione una opcion</option>
+                </select>
+                </div>
+
+                <div class="form-space">
+                    <label>Servicio</label>
+                    <select class="browser-default" id="cbbServicio" name="cbbServicio">
+                  <option value="" disabled selected>Selecione una opcion</option>
+                </select>
+                </div>
+
+                <label for="txtEspecificaciones">Especificaciones</label>
+                <textarea id="txtEspecificaciones" name="txtEspecificaciones" class="materialize-textarea" placeholder="Especificaciones.."></textarea>
+            </form>
+        </div>
+        <div class="modal-footer white">
+            <!-- <button id="btnRegistraSolicitante" class="modal-action modal-close waves-effect waves-green btn-flat">Registrar</button> -->
+            <button id="btnRegistraOficio" class="waves-effect waves-green btn-flat">Registrar</button>
+            <button id="btnCRegistraOficio" class="modal-action modal-close waves-effect waves-red btn-flat">Cancelar</button>
+        </div>
+    </div>
+
+
+    <div id="mdBusqueda" class="modal modal-fixed-footer white">
+        <div class="modal-content">
+            <h5>Buscar solicitante</h5>
+            <br />
+            <form id="frmBuscaSolicitante" method="post">
+                <label>Criterio</label>
+                <select class="browser-default" id="cbCriterio" name="cbCriterio">
+                <option value="" disabled selected>Seleccione una opcion</option>
+                <option value="1">Nombre</option>
+                <option value="2">CURP</option>
+                <option value="3">Clave de elector</option>
+                </select>
+
+                <div class="input-field">
+                    <input id="txtBusqueda" name="txtBusqueda" type="text" class="validate">
+                    <label for="txtBusqueda">Busqueda</label>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer white">
+            <button id="btnBuscaSolicitante" class="modal-action modal-close waves-effect waves-green btn-flat">Buscar</button>
+            <button id="btnCBuscaSolicitante" class="modal-action modal-close waves-effect waves-red btn-flat">Cancelar</button>
+        </div>
+    </div>
+
+    <div id="mdInformacion" class="modal white modal-fixed-footer">
+        <div class="modal-content">
+            <h5>Informacion del solicitante</h5>
+            <br />
+            <form id="frmEditaSolicitante" method="post">
+                <div class="input-field">
+                    <input disabled id="txtEditaCurp" name="txtEditaCurp" placeholder="CURP" type="text" class="validate">
+                    <label for="txtEditaCurp">CURP</label>
+                </div>
+                <div class="input-field">
+                    <input disabled id="txtEditaNombre" name="txtEditaNombre" placeholder="Nombre" type="text" class="validate">
+                    <label for="txtEditaNombre">Nombre</label>
+                </div>
+                <div class="input-field">
+                    <input disabled id="txtEditaApellidoP" name="txtEditaApellidoP" placeholder="Apellido paterno" type="text" class="validate">
+                    <label for="txtEditaApellidoP">Apellido paterno</label>
+                </div>
+                <div class="input-field">
+                    <input disabled id="txtEditaApellidoM" name="txtEditaApellidoM" placeholder="Apellido materno" type="text" class="validate">
+                    <label for="txtEditaApellidoM">Apellido paterno</label>
+                </div>
+                <div class="input-field">
+                    <input disabled id="txtEditaClaveElector" name="txtEditaClaveElector" placeholder="Clave de elector" type="text" class="validate">
+                    <label for="txtEditaClaveElector">Clave de elector</label>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer white">
+            <button id="btnGuardaEditaSolicitante" class="modal-action modal-close waves-effect waves-green btn-flat" disabled>Guardar</button>
+            <button id="btnEditaSolicitante" class="waves-effect waves-yellow btn-flat">Editar</button>
+            <button id="btnEliminaSolicitante" class="modal-action modal-close waves-effect waves-red btn-flat">Eliminar</button>
+            <button id="btnCInfoSolicitante" class="modal-action modal-close waves-effect waves-red btn-flat">Cancelar</button>
+        </div>
+    </div>
+
+
+    <!-- /// Sidebar - Menu /// -->
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="userView">
+                <div class="background">
+                    <img src="s1.jpg">
+                </div>
+                <a href="#!name"><span class="white-text name">Uziel Cetzal</span></a>
+                <a href="#!email"><span class="white-text email">uzielcetzal@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">home</i>Inicio</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">description</i>Reportes</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">book</i>Catalogos</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">account_circle</i>Usuarios</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">settings</i>Configuracion</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">info</i>Acerca de</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">highlight_off</i>Cerrar sesion</a></li>
+    </ul>
+
+    <script type="text/javascript">
+        $(".xbutton-collapse").sideNav({});
+    </script>
+
+</body>
+
+</html>

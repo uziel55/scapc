@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SCAPC 1</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+    <nav class="nav-extended">
+        <div class="nav-wrapper navbar-fixed">
+            <a href="#!" class="brand-logo center">SCAPC</a>
+            <ul class="left">
+                <li><a data-activates="slide-out" href="#" class="xbutton-collapse"><span class="material-icons">menu</span></a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="#"><span class="material-icons">add</span></a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- /// Header /// -->
+    <header class="jumbotron text-center main">
+        <h1>Sistema de Control de Apoyos</h1>
+        <h2>de Participacion Ciudadana</h2>
+    </header>
+
+    <!-- /// Indicadores - Contadores /// -->
+    <div id="indicators" class="text-center clearfix sticky">
+        <a href="#" id="pendientes">
+            <div class="col-lg-3 col-sm-3 col-xs-3 top">
+                <p>Pendientes</p>
+                <span id="pendiente"></span>
+            </div>
+        </a>
+        <a href="#" id="aprobados">
+            <div class="col-lg-3 col-sm-3 col-xs-3 top">
+                <p>Aprobados</p>
+                <span id="aprobado"></span>
+            </div>
+        </a>
+        <a href="#" id="ejecucion">
+            <div class="col-lg-3 col-sm-3 col-xs-3 top">
+                <p>Ejecucion</p>
+                <span id="ejecutado"></span>
+            </div>
+        </a>
+        <a href="#" id="concluidos">
+            <div class="col-lg-3 col-sm-3 col-xs-3 top">
+                <p>Concluidos</p>
+                <span id="concluido"></span>
+            </div>
+        </a>
+    </div>
+    <!-- /// Barra de herramientas /// -->
+
+    <!-- /// Contenido - Reportes /// -->
+    <section id="inicio">
+
+    </section>
+
+
+    <!-- /// Sidebar - Menu /// -->
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="userView">
+                <div class="background">
+                    <img src="s1.jpg">
+                </div>
+                <a href="#!name"><span class="white-text name">Uziel Cetzal</span></a>
+                <a href="#!email"><span class="white-text email">uzielcetzal@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">home</i>Inicio</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">description</i>Reportes</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">book</i>Catalogos</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">account_circle</i>Usuarios</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">settings</i>Configuracion</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">info</i>Acerca de</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">highlight_off</i>Cerrar sesion</a></li>
+    </ul>
+
+
+
+    <!-- /// Modal - Ventana Emergente /// -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Agregar reporte</h4>
+            <p>* Campos obligatorios</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agregar</a>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/cuentaReportes.js"></script>
+    <script>
+
+
+    </script>
+    <!-- Bootstrap JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!--<script type="text/javascript" src="js/reportes.js"></script>-->
+    <!--<script type="text/javascript" src="http://localhost:35729/livereload.js">
+        </script>-->
+</body>
+
+</html>

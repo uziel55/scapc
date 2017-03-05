@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,700');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+body{
+    background: #f0f0f0;
+    height: 100%;
+}
+.form-space{
+  margin-top: 10px;
+}
+.sub {
+    background: url(s8.jpg);
+    background-size: 100%;
+}
+
+.main {
+    background: url(s1.jpg);
+}
+
+.jumbotron {
+    font-family: 'Roboto', sans-serif;
+    background-position: top;
+    background-size: 100%;
+    color: white;
+    font-weight: 300;
+    margin: 0;
+    height: 190px;
+    padding: 0;
+}
+
+.jumbotron h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-shadow: 0 0 5px #151515;
+}
+
+.jumbotron h2 {
+    font-size: 1.8em;
+    margin-top: 10px;
+    padding: 0;
+    color: #c9c9c9;
+    font-weight: 300;
+    text-shadow: 0 0 5px #151515;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav .brand-logo {
+    line-height: 50px;
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+.brand-logo:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.waves-effect:not(hover) {
+    text-decoration: none;
+}
+
+.jumbotron .nav-wrapper {
+    /*background-color: #004A8E;*/
+    background-color: rgba(0, 0, 0, 0);
+    height: 50px;
+}
+
+.jumbotron .nav-wrapper ul li a: {
+    color: #f0f0f0;
+    line-height: 60px;
+}
+
+.jumbotron .nav-wrapper ul li a:hover {
+    color: #f0f0f0;
+    line-height: 60px;
+}
+
+.jumbotron .nav-wrapper ul li a:not(hover) {
+    background: none;
+    line-height: 60px;
+}
+
+#indicators {
+    transition: 1s;
+    background: #ffffff;
+}
+
+#indicators div {
+    padding: 20px 0 25px 0;
+    background: #ffffff;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+#indicators div span {
+    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+#indicators div p {
+    font-size: 1.1em;
+    color: #000;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+
+#indicators div:hover {
+    background: #fcfcfc;
+}
+
+#mainsub {
+    background: red;
+}
+
+
+/* ############## tablas ################ */
+
+.shadow-z-1 {
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.btn-floating {
+    background: #2681DC;
+}
+
+#contenido {
+    background: #fff;
+}
+
+#inicio .reporte {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 15px 10px 15px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #d9d9d9;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#inicio .reporte:hover {
+    background: #fbfbfb;
+}
+
+#inicio .reporte .nombre {
+    font-weight: 700;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.reporte .fecha {}
+
+#inicio .reporte .estatus {
+    font-size: 0.9em;
+}
+
+#inicio .reporte .resumen {
+    color: #464646;
+    font-size: 1em;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+
+.new .badge {
+    font-weight: 800 !important;
+}
+
+.pendiente {
+    background-color: #D34743 !important;
+    font-weight: 800 !important;
+}
+
+.aprobado {
+    background-color: #F0AD4E !important;
+    font-weight: 800 !important;
+}
+
+.ejecucion {
+    background-color: #5CB85C !important;
+    font-weight: 800 !important;
+}
+
+.concluido {
+    background-color: #337AB7 !important;
+    font-weight: 800 !important;
+}
+
+.paging-nav {
+    text-align: right;
+    padding-top: 2px;
+}
+
+.paging-nav a {
+    margin: auto 1px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1px 7px;
+    background: #91b9e6;
+    color: white;
+    border-radius: 3px;
+}
+
+.paging-nav .selected-page {
+    background: #187ed5;
+    font-weight: bold;
+}
+
+.paging-nav, #tableData {
+    width: 400px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.toolbar {
+    height: 50px;
+    line-height: 50px;
+}
+
+@media screen and (min-width: 480px) {
+    .sub {
+        background-size: cover;
+    }
+}
+#cTbSolicitantes{
+  height:'100%';
+}
+.pagination{
+  background: #FFFFFF;
+  padding: 15px 10px 15px 10px;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+table{
+  background: #FFFFFFF;
+}
+
+#cTbSolicitantes, #cTbReportes{
+    background: #ffffff;
+    height: 100%;
+
+}
+#cTbSolicitantes table{
+
+  background: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+
+}
+#cTbSolicitantes tbody tr{
+  cursor: pointer !important;
+}

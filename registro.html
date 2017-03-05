@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>SCAPC</title>
+		<!-- Bootstrap CSS -->
+		<
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body id="wrapper" class="active">
+		<!-- Sidebar -->
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul id="sidebar_menu" class="sidebar-nav">
+				<li class="sidebar-brand"><a id="menddu-toggle" href="#">Menú</a></li>
+			</ul>
+			<ul class="sidebar-nav" id="sidebar">
+				<li><a href="#"><span class="sub_icon glyphicon glyphicon-home"></span> Inicio</a></li>
+				<li><a href="#">Reportes<span class="sub_icon glyphicon glyphicon-list-alt"></span></a></li>
+				<li><a href="#">Catálogos<span class="sub_icon glyphicon glyphicon-book"></span></a></li>
+				<li><a href="#">Usuarios<span class="sub_icon glyphicon glyphicon-user"></span></a></li>
+				<li><a href="#">Opciones<span class="sub_icon glyphicon glyphicon-cog"></span></a></li>
+				<li><a href="#">Acerca de<span class="sub_icon glyphicon glyphicon-question-sign"></span></a></li>
+				<li class="last"><a href="#">Cerrar sesión<span class="sub_icon glyphicon glyphicon-lock"></span></a></li>
+			</ul>
+		</div>
+		<nav class="navbar navbar-inverse">
+			<ul class="nav navbar-nav pull-left">
+				<li class="nav-item">
+					<a class="nav-link" href="#" id="menu-toggle"><span class="glyphicon glyphicon-align-justify"></span></a>
+				</li>
+			</ul>
+			<a class="navbar-brand navbar-brand-centered" href="#" >Sistema de Control</a>
+		</nav>
+		<div class="container" id="contenido">
+			<div class="panel panel-default">
+				<div class="panel-heading clearfix" id="reportes"><div class="pull-left">Registro de solicitud nueva</div> <a href="#" class="btn-sub pull-right btn btn-xs"><span class="glyphicon glyphicon-arrow-left"></span></a></div>
+				<div class="panel-body">
+					<form>
+						<div class="form-group">
+							<label for="email">Nombre:</label>
+							<input type="text" class="form-control" id="email" placeholder="Escriba su nombre aqui plis">
+						</div>
+						<div class="form-group">
+							<label for="pwd">Apellido:</label>
+							<input type="text" class="form-control" id="pwd" placeholder="Escriba su apellido aqui plis">
+						</div>
+						<div class="form-group">
+							<label for="pwd">Descripción de problema:</label>
+							<textarea class="form-control" placeholder="Describa su problema aqui"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputFile">Evidencias</label>
+							<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+							<small id="fileHelp" class="form-text text-muted">El archivo no puede superar los 5MB.</small>
+						</div>
+						<button type="submit" class="btn btn-success btn-md btn-block">Submit</button>
+					</div>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript">
+		$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("active");
+		});
+	</script>
+</body>
+</html>
